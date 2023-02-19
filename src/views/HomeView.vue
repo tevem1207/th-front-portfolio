@@ -6,7 +6,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
 import MainIntro from "@/components/main/MainIntro.vue";
 import MainProfile from "@/components/main/MainProfile.vue";
 import MainSkills from "@/components/main/MainSkills.vue";
