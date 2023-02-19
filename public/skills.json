@@ -1,0 +1,40 @@
+[
+  {
+    "id": "React",
+    "name": "React.js",
+    "contents": [
+      "Custom Hook을 통한 로직 구현",
+      "useCallback, useMemo로 렌더링 최적화",
+      "레이지 로딩 및 스켈레톤 UI 구현",
+      "Recoil을 통한 상태관리"
+    ]
+  },
+  {
+    "id": "Vue",
+    "name": "Vue.js",
+    "contents": [
+      "Composition API 와 setup script를 통한 로직 구현",
+      "Vuex를 사용하여 상태관리",
+      "Vue2와 Vue3 모두 경험"
+    ]
+  },
+  {
+    "id": "TypeScript",
+    "name": "TypeScript",
+    "contents": ["정적인 타입 선언을 통해 효율적인 코드 탐색과 디버깅 가능"]
+  },
+  {
+    "id": "FastAPI",
+    "name": "FastAPI",
+    "contents": ["Pydantic 모델을 통한 데이터 검증", "REST API 구현"]
+  },
+  {
+    "id": "Python",
+    "name": "Python",
+    "contents": [
+      "BFS, DFS 등의 알고리즘 구현 가능",
+      "pandas와 scikit-learn을 이용한 콘텐츠 기반 필터링 구현",
+      "Requests와 Beautiful Soup을 이용한 웹 크롤링"
+    ]
+  }
+]
