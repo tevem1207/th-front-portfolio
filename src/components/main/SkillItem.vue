@@ -39,6 +39,10 @@ const Logo = defineAsyncComponent(
   background-color: var(--color-background-mute);
 }
 
+.skill-item:hover {
+  background-color: var(--color-background);
+}
+
 .skill-item-title {
   display: flex;
   flex-direction: column;
