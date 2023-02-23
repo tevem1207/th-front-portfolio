@@ -15,7 +15,17 @@
         {{ content }}
       </li>
     </ul>
-    <div v-if="isLevel" class="skill-item-level"></div>
+    <Transition name="level">
+      <div v-if="isLevel" class="skill-item-level">
+        <div
+          class="skill-item-level-bar bar"
+          :style="{
+            width: `${props.skillData.level}%`,
+            backgroundColor: `${props.skillData.color}`,
+          }"
+        ></div>
+      </div>
+    </Transition>
   </div>
 </template>
 
@@ -33,7 +43,6 @@ const isLevel = ref(false);
 
 const setLevel = (value: boolean) => {
   isLevel.value = value;
-  console.log(value);
 };
 </script>
 
@@ -47,6 +56,7 @@ const setLevel = (value: boolean) => {
   padding: 5px 20px;
   margin-top: 20px;
   border-radius: 10px;
+  overflow: hidden;
 
   background-color: var(--color-background-mute);
 }
@@ -85,9 +95,36 @@ const setLevel = (value: boolean) => {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  background-color: var(--color-border);
+}
 
-  background-color: var(--color-border-hover);
+.skill-item-level-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.level-enter-active,
+.level-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.level-enter-from,
+.level-leave-to {
+  opacity: 0;
+}
+
+.level-enter-active .bar,
+.level-leave-active .bar {
+  transition: all 0.5s ease;
+}
+
+.level-enter-from .bar,
+.level-leave-to .bar {
+  transform: translateX(-100%);
 }
 
 @media (min-width: 600px) {
