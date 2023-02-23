@@ -13,10 +13,10 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-
 import SkillItem from "./SkillItem.vue";
+import type { Skill } from "@/types";
 
-const skillsData = ref<Array<{ id: string; name: string; contents: string }>>();
+const skillsData = ref<Array<Skill>>();
 
 fetch("/skills.json")
   .then((res) => res.json())

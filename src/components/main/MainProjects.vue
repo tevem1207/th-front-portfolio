@@ -15,9 +15,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import ProjectsItem from "./ProjectsItem.vue";
+import type { Project } from "@/types";
 
-const projectsData =
-  ref<Array<{ id: string; name: string; role: string; description: string }>>();
+const projectsData = ref<Array<Project>>();
 
 fetch("/projects.json")
   .then((res) => res.json())

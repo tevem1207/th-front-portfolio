@@ -27,9 +27,10 @@
 
 <script setup lang="ts">
 import { defineAsyncComponent } from "vue";
+import type { Project } from "@/types";
 
 const props = defineProps<{
-  projectData: { id: string; name: string; role: string; description: string };
+  projectData: Project;
   index: number;
 }>();
 const Logo = defineAsyncComponent(

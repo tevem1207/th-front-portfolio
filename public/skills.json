@@ -7,7 +7,9 @@
       "useCallback, useMemo로 렌더링 최적화",
       "레이지 로딩 및 스켈레톤 UI 구현",
       "Recoil을 통한 상태관리"
-    ]
+    ],
+    "level": 80,
+    "color": "#61DAFB"
   },
   {
     "id": "Vue",
@@ -16,17 +18,23 @@
       "Composition API 와 setup script를 통한 로직 구현",
       "Vuex를 사용하여 상태관리",
       "Vue2와 Vue3 모두 경험"
-    ]
+    ],
+    "level": 81,
+    "color": "#4FC08D"
   },
   {
     "id": "TypeScript",
     "name": "TypeScript",
-    "contents": ["정적인 타입 선언을 통해 효율적인 코드 탐색과 디버깅 가능"]
+    "contents": ["정적인 타입 선언을 통해 효율적인 코드 탐색과 디버깅 가능"],
+    "level": 70,
+    "color": "#3178C6"
   },
   {
     "id": "FastAPI",
     "name": "FastAPI",
-    "contents": ["Pydantic 모델을 통한 데이터 검증", "REST API 구현"]
+    "contents": ["Pydantic 모델을 통한 데이터 검증", "REST API 구현"],
+    "level": 40,
+    "color": "#009688"
   },
   {
     "id": "Python",
@@ -35,6 +43,8 @@
       "BFS, DFS 등의 알고리즘 구현 가능",
       "pandas와 scikit-learn을 이용한 콘텐츠 기반 필터링 구현",
       "Requests와 Beautiful Soup을 이용한 웹 크롤링"
-    ]
+    ],
+    "level": 80,
+    "color": "#3776AB"
   }
 ]

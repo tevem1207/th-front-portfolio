@@ -1,5 +1,9 @@
 <template>
-  <div class="skill-item">
+  <div
+    @mouseover="setLevel(true)"
+    @mouseleave="setLevel(false)"
+    class="skill-item"
+  >
     <div class="skill-item-title">
       <Logo class="logo" />
       <p class="font-bold font-12">
@@ -11,18 +15,26 @@
         {{ content }}
       </li>
     </ul>
+    <div v-if="isLevel" class="skill-item-level"></div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent } from "vue";
+import { ref, defineAsyncComponent } from "vue";
+import type { Skill } from "@/types";
 
 const props = defineProps<{
-  skillData: { id: string; name: string; contents: string };
+  skillData: Skill;
 }>();
 const Logo = defineAsyncComponent(
   () => import(`../icons/Icon${props.skillData.id}.vue`)
 );
+const isLevel = ref(false);
+
+const setLevel = (value: boolean) => {
+  isLevel.value = value;
+  console.log(value);
+};
 </script>
 
 <style>
@@ -37,10 +49,6 @@ const Logo = defineAsyncComponent(
   border-radius: 10px;
 
   background-color: var(--color-background-mute);
-}
-
-.skill-item:hover {
-  background-color: var(--color-background);
 }
 
 .skill-item-title {
@@ -69,6 +77,17 @@ const Logo = defineAsyncComponent(
 
 .skill-item-contents li + li {
   margin-top: 6px;
+}
+
+.skill-item-level {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+  background-color: var(--color-border-hover);
 }
 
 @media (min-width: 600px) {
