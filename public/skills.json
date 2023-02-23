@@ -33,7 +33,7 @@
     "id": "FastAPI",
     "name": "FastAPI",
     "contents": ["Pydantic 모델을 통한 데이터 검증", "REST API 구현"],
-    "level": 40,
+    "level": 50,
     "color": "#009688"
   },
   {
