@@ -28,9 +28,7 @@
             backgroundColor: `${skillData.color}`,
           }"
         ></div>
-        <div v-if="isLevel" class="skill-item-level-text font-20">
-          {{ skillData.level }}
-        </div>
+        <div class="skill-item-level-text font-20">{{ count }}%</div>
       </div>
     </Transition>
   </div>
@@ -47,9 +45,25 @@ const Logo = defineAsyncComponent(
   () => import(`../icons/Icon${props.skillData.id}.vue`)
 );
 const isLevel = ref(false);
+const count = ref(0);
+let intervalId: ReturnType<typeof setInterval> = -1;
 
 const setLevel = (value: boolean) => {
   isLevel.value = value;
+  clearInterval(intervalId);
+  if (value) {
+    intervalId = setInterval(increaseCount, 250 / props.skillData.level);
+  } else {
+    count.value = 0;
+  }
+};
+
+const increaseCount = () => {
+  if (count.value < props.skillData.level) {
+    count.value += 1;
+  } else {
+    clearInterval(intervalId);
+  }
 };
 </script>
 
