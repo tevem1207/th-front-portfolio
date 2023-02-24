@@ -16,14 +16,21 @@
       </li>
     </ul>
     <Transition name="level">
-      <div v-if="isLevel" class="skill-item-level">
+      <div
+        v-if="isLevel"
+        class="skill-item-level"
+        :style="{ borderColor: `${skillData.color}` }"
+      >
         <div
           class="skill-item-level-bar bar"
           :style="{
-            width: `${props.skillData.level}%`,
-            backgroundColor: `${props.skillData.color}`,
+            width: `${skillData.level}%`,
+            backgroundColor: `${skillData.color}`,
           }"
         ></div>
+        <div v-if="isLevel" class="skill-item-level-text font-20">
+          {{ skillData.level }}
+        </div>
       </div>
     </Transition>
   </div>
@@ -53,7 +60,7 @@ const setLevel = (value: boolean) => {
   min-height: 120px;
   display: flex;
   align-items: center;
-  padding: 5px 20px;
+  padding: 10px 20px;
   margin-top: 20px;
   border-radius: 10px;
   overflow: hidden;
@@ -95,7 +102,9 @@ const setLevel = (value: boolean) => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-border);
+  border-radius: 10px;
+  border: 3px solid;
+  /* background-color: var(--color-border); */
 }
 
 .skill-item-level-bar {
@@ -104,7 +113,18 @@ const setLevel = (value: boolean) => {
   left: 0;
   width: 0;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.7;
+}
+
+.skill-item-level-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-background-mute);
+  text-shadow: -2px 0 var(--color-text), 0 2px var(--color-text),
+    2px 0 var(--color-text), 0 -2px var(--color-text);
+  opacity: 1.5;
 }
 
 .level-enter-active,

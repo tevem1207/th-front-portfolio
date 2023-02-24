@@ -19,7 +19,7 @@
       "Vuex를 사용하여 상태관리",
       "Vue2와 Vue3 모두 경험"
     ],
-    "level": 81,
+    "level": 85,
     "color": "#4FC08D"
   },
   {
@@ -33,7 +33,7 @@
     "id": "FastAPI",
     "name": "FastAPI",
     "contents": ["Pydantic 모델을 통한 데이터 검증", "REST API 구현"],
-    "level": 50,
+    "level": 55,
     "color": "#009688"
   },
   {
