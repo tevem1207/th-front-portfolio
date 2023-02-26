@@ -29,6 +29,13 @@
     "level": 70,
     "color": "#3178C6"
   },
+  // {
+  //   "id": "JavaScript",
+  //   "name": "TypeScript",
+  //   "contents": ["정적인 타입 선언을 통해 효율적인 코드 탐색과 디버깅 가능"],
+  //   "level": 80,
+  //   "color": "#"
+  // },
   {
     "id": "FastAPI",
     "name": "FastAPI",
