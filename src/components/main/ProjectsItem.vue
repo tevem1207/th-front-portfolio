@@ -5,7 +5,11 @@
     </li>
   </ul>
   <div class="project-item">
-    <img :src="getImgUrl(projectData.id)" class="project-item-img" />
+    <img
+      :src="getImgUrl(projectData.id)"
+      class="project-item-img"
+      :alt="projectData.name + ' project image'"
+    />
     <div class="project-item-title">
       <div class="project-item-role font-14">
         {{ projectData.role }}
