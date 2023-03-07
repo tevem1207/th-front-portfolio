@@ -21,6 +21,7 @@
 <style>
 .intro {
   padding: 0px 30px;
+  margin-top: 110px;
 }
 
 .intro-contents {

@@ -1,24 +1,19 @@
 <template>
-  <MainIntro ref="introElement" />
-  <MainProfile ref="profileElement" />
-  <MainSkills ref="skillsElement" />
-  <MainProjects ref="projectsElement" />
+  <MainIntro />
+  <MainProfile class="main-component" />
+  <MainSkills class="main-component" />
+  <MainTeamProjects class="main-component" />
 </template>
 
 <script setup lang="ts">
 import MainIntro from "@/components/main/MainIntro.vue";
 import MainProfile from "@/components/main/MainProfile.vue";
 import MainSkills from "@/components/main/MainSkills.vue";
-import MainProjects from "@/components/main/MainProjects.vue";
+import MainTeamProjects from "@/components/main/MainTeamProjects.vue";
 </script>
 
 <style>
-.intro {
-  margin-top: 110px;
-}
-.profile,
-.skills,
-.projects {
+.main-component {
   padding-top: 70px;
   margin-top: 30px;
 }
