@@ -1,44 +1,24 @@
 <template>
   <ul class="nav-menu-list nav-not-burger">
     <li
-      @click="() => scrollToElement('profile')"
+      v-for="menu in menues"
+      :key="menu.key"
+      @click="() => scrollToElement(menu.key)"
       class="nav-menu-list-item font-16"
     >
-      Profile
-    </li>
-    <li
-      @click="() => scrollToElement('skills')"
-      class="nav-menu-list-item font-16"
-    >
-      Skills
-    </li>
-    <li
-      @click="() => scrollToElement('projects')"
-      class="nav-menu-list-item font-16"
-    >
-      Projects
+      {{ menu.name }}
     </li>
   </ul>
   <div class="nav-burger">
     <IconMenuBurger @click="setIsMenu" class="icon-24 icon-burger" />
     <ul v-if="isMenu" class="nav-menu-list">
       <li
-        @click="() => scrollToElement('profile')"
+        v-for="menu in menues"
+        :key="menu.key"
+        @click="() => scrollToElement(menu.key)"
         class="nav-menu-list-item font-16"
       >
-        Profile
-      </li>
-      <li
-        @click="() => scrollToElement('skills')"
-        class="nav-menu-list-item font-16"
-      >
-        Skills
-      </li>
-      <li
-        @click="() => scrollToElement('projects')"
-        class="nav-menu-list-item font-16"
-      >
-        Projects
+        {{ menu.name }}
       </li>
     </ul>
   </div>
@@ -48,11 +28,15 @@
 import { ref } from "vue";
 import IconMenuBurger from "../icons/IconMenuBurger.vue";
 
+const menues = [
+  { key: "profile", name: "Profile" },
+  { key: "skills", name: "Skills" },
+  { key: "teamProjects", name: "Team Projects" },
+];
 const isMenu = ref(false);
 const setIsMenu = () => {
   isMenu.value = !isMenu.value;
 };
-
 const scrollToElement = (targetId: string) => {
   const el = document.getElementById(targetId);
   if (el) {
@@ -92,7 +76,7 @@ const scrollToElement = (targetId: string) => {
   }
 
   .nav-menu-list {
-    width: 150px;
+    width: 170px;
     position: absolute;
     top: 50px;
     right: 5px;
@@ -107,7 +91,7 @@ const scrollToElement = (targetId: string) => {
 
   .nav-menu-list-item {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
   }
 
   .nav-menu-list-item + .nav-menu-list-item {
@@ -123,12 +107,12 @@ const scrollToElement = (targetId: string) => {
   .nav-menu-list {
     position: relative;
     flex-direction: row;
-    margin-right: 5px;
   }
 
   .nav-menu-list-item {
     padding: 10px;
-    width: 100px;
+    margin: 0 5px;
+    max-width: 150px;
     height: 100%;
     border-radius: 5px;
   }
