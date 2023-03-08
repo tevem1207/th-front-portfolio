@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import IconMenuBurger from "../icons/IconMenuBurger.vue";
+import IconMenuBurger from "@/components/icons/IconMenuBurger.vue";
 
 const menues = [
   { key: "profile", name: "Profile" },
