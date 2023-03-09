@@ -5,7 +5,7 @@
       <SkillItem
         v-for="skillData in skillsData"
         :key="skillData.id"
-        :skillData="skillData"
+        :skill-data="skillData"
       />
     </div>
   </div>

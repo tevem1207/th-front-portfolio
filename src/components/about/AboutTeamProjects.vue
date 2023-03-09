@@ -4,7 +4,7 @@
     <div class="contents team-contents">
       <ProjectsItem
         v-for="(projectData, index) in projectsData"
-        :projectData="projectData"
+        :project-data="projectData"
         :index="index"
         :key="projectData.id"
       />
