@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bar">
     <div class="nav-bar-inner">
-      <div class="nav-title font-14">
+      <div class="nav-title font-12">
         <p>황태희</p>
         <p>웹 개발 포트폴리오</p>
       </div>
