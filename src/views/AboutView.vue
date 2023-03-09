@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import NavBar from "@/components/about/nav/NavBar.vue";
-import Footer from "@/components/about/MyFooter.vue";
+import Footer from "@/components/about/AboutFooter.vue";
 import AboutIntro from "@/components/about/AboutIntro.vue";
 import AboutProfile from "@/components/about/AboutProfile.vue";
 import AboutSkills from "@/components/about/AboutSkills.vue";
