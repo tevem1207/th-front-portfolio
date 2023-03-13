@@ -4,7 +4,7 @@
       v-for="menu in menues"
       :key="menu.key"
       @click="() => scrollToElement(menu.key)"
-      class="nav-menu-list-item font-16"
+      class="nav-menu-list-item font-14"
     >
       {{ menu.name }}
     </li>
