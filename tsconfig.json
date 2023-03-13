@@ -1,8 +1,7 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "vue3-carousel-3d.d.ts"],
   "compilerOptions": {
-    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
