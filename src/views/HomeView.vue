@@ -1,7 +1,6 @@
 <template>
   <div id="home">
-    Home
-    <HomeCarousel :items-data="items" />
+    <HomeCarousel class="home-carousel" :items-data="items" />
   </div>
 </template>
 
@@ -39,5 +38,12 @@ onUnmounted(() => {
 #home {
   height: calc(var(--vh, 1vh) * 100);
   background-color: black;
+  display: grid;
+  align-content: center;
+}
+
+.home-carousel {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
 }
 </style>

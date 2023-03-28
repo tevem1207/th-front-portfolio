@@ -5,7 +5,7 @@
     :space="500"
     :inverse-scaling="600"
     :display="9"
-    :onMainSlideClick="() => {}"
+    :on-main-slide-click="({ index }) => openModal(index)"
   >
     <Slide v-for="(item, i) in itemsData" :key="i" :index="i">
       <CarouselItem
