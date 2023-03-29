@@ -5,7 +5,7 @@
     :space="500"
     :inverse-scaling="600"
     :display="9"
-    :on-main-slide-click="({ index }) => openModal(index)"
+    :on-main-slide-click="openModal"
   >
     <Slide v-for="(item, i) in itemsData" :key="i" :index="i">
       <CarouselItem
@@ -37,10 +37,7 @@ interface PropsType {
 defineProps<PropsType>();
 
 const showModal = ref(-1);
-const openModal = (index: number) => {
-  console.log(index);
-  showModal.value = index;
-};
+const openModal = () => {};
 const closeModal = () => {
   showModal.value = -1;
 };
