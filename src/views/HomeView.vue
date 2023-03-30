@@ -13,17 +13,9 @@ const setScreenSize = () => {
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 };
 const items = [
-  { name: "1", contents: "" },
-  { name: "2", contents: "" },
-  { name: "3", contents: "" },
-  { name: "4", contents: "" },
-  { name: "5", contents: "" },
-  { name: "6", contents: "" },
-  { name: "7", contents: "" },
-  { name: "8", contents: "" },
-  { name: "9", contents: "" },
-  { name: "10", contents: "" },
-  { name: "11", contents: "" },
+  { name: "Project1", contents: "Description of Project1" },
+  { name: "Project2", contents: "Description of Project2" },
+  { name: "Project3", contents: "Description of Project3" },
 ];
 
 onMounted(() => {

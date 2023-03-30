@@ -11,18 +11,18 @@
       <CarouselItem
         :name="item.name"
         :content="item.contents"
-        img-src="https://placehold.it/360x300"
-      />
-      <HomeModal
-        :name="item.name"
-        :content="item.contents"
-        img-src="https://placehold.it/360x300"
-        :show-modal="showModal"
         :index="i"
-        :close-modal="closeModal"
+        :set-modal-index="setModalIndex"
+        img-src="https://placehold.it/360x300"
       />
     </Slide>
   </Carousel3d>
+  <HomeModal
+    :items-data="itemsData"
+    :is-modal="isModal"
+    :index="modalIndex"
+    :close-modal="closeModal"
+  />
 </template>
 
 <script setup lang="ts">
@@ -36,10 +36,17 @@ interface PropsType {
 }
 defineProps<PropsType>();
 
-const showModal = ref(-1);
-const openModal = () => {};
+const modalIndex = ref(0);
+const isModal = ref(false);
+const setModalIndex = (index: number) => {
+  modalIndex.value = index;
+};
+const openModal = () => {
+  isModal.value = true;
+  console.log(modalIndex.value);
+};
 const closeModal = () => {
-  showModal.value = -1;
+  isModal.value = false;
 };
 </script>
 
