@@ -1,6 +1,6 @@
 <template>
   <div id="teamProjects" class="team">
-    <div class="title">Team Projects</div>
+    <div class="title">Projects</div>
     <div class="contents team-contents">
       <ProjectsItem
         v-for="(projectData, index) in projectsData"
