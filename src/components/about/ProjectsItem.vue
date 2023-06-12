@@ -4,7 +4,7 @@
       {{ content }}
     </li>
   </ul>
-  <div class="project-item">
+  <div class="project-item" @click="toProject">
     <img
       :src="getImgUrl(projectData.id)"
       class="project-item-img"
@@ -37,12 +37,17 @@ const props = defineProps<{
   projectData: Project;
   index: number;
 }>();
+
 const Logo = defineAsyncComponent(
   () => import(`../icons/Icon${props.projectData.id}.vue`)
 );
 
 const getImgUrl = (id: string) => {
   return new URL(`../../assets/imgs/${id}.png`, import.meta.url).href;
+};
+
+const toProject = () => {
+  props.projectData.url && window.open(props.projectData.url, "", "_blank");
 };
 </script>
 
@@ -59,6 +64,17 @@ const getImgUrl = (id: string) => {
   border-radius: 10px;
   /* border: 1px solid var(--color-border); */
   background-color: var(--color-background-mute);
+  cursor: pointer;
+  border: 2px solid var(--color-background-mute);
+}
+
+.project-item:hover {
+  border-color: var(--color-border);
+  filter: brightness(0.99);
+}
+
+.project-item:active {
+  filter: brightness(0.94);
 }
 
 .project-item-img {
