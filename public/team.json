@@ -1,5 +1,17 @@
 [
   {
+    "id": "LivingFakePlants",
+    "name": "살아있는 가짜 식물",
+    "role": "One-person team",
+    "description": [
+      "가상 식물 키우기 서비스",
+      "React와 TypeScript 사용",
+      "Custom Hook을 이용한 로직 분리",
+      "MUI를 사용하여 버튼, 다크 모드 등의 UI를 구현",
+      "FireStore를 활용하여 사용자 데이터를 저장"
+    ]
+  },
+  {
     "id": "Beanzido",
     "name": "Beanzido",
     "role": "Front-end develop & Design",
