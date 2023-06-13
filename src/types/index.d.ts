@@ -13,3 +13,11 @@ export interface Project {
   description: string;
   url: string;
 }
+
+export interface Profile {
+  id: string;
+  title: string;
+  startAt: Date;
+  endAt: Date;
+  contents: string;
+}

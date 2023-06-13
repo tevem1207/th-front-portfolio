@@ -1,43 +1,62 @@
 <template>
   <div id="profile" class="profile">
     <div class="title">Profile</div>
-    <div class="profile-contents">
+    <div
+      class="profile-container"
+      v-for="profileData in profilesData"
+      :key="profileData.id"
+    >
       <div>
-        <span class="ssafy-title font-16"> 삼성 청년 SW 아카데미 </span>
-        <span> 2022.01 - 2022.12 </span>
+        <span class="profile-title font-16"> {{ profileData.title }} </span>
+        <span class="profile-period">
+          {{ profileData.startAt }} - {{ profileData.endAt }}
+        </span>
       </div>
-      <div class="ssafy-detail">
-        <p>다양한 프로젝트에서 웹/앱 서비스 출시</p>
-        <p>프론트엔드, UI/UX 디자인</p>
-        <p>알고리즘을 통한 문제 해결</p>
-        <p>우수 교육생 선정</p>
+      <div class="profile-content">
+        <p v-for="content in profileData.contents" :key="content">
+          {{ content }}
+        </p>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+import type { Profile } from "@/types";
+
+const profilesData = ref<Array<Profile>>();
+fetch("/profile.json")
+  .then((res) => res.json())
+  .then((data) => {
+    profilesData.value = data;
+  });
+</script>
 
 <style>
-.profile-contents {
-  margin-left: 20px;
+.profile-container {
   margin-top: 20px;
+  padding: 20px;
 }
 
 .profile .title::before {
   background-color: #fcd303;
 }
 
-.ssafy-title {
+.profile-title {
   font-weight: 600;
 }
 
-.ssafy-detail {
+.profile-period {
+  margin-left: 10px;
+}
+
+.profile-content {
   margin-top: 10px;
   margin-left: 15px;
 }
 
-.ssafy-detail p + p {
+.profile-content p + p {
   margin-top: 5px;
 }
 </style>
