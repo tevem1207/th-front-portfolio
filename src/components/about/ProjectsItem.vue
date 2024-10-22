@@ -4,7 +4,7 @@
       {{ content }}
     </li>
   </ul>
-  <div class="project-item" @click="toProject">
+  <div :class="`project-item ${isURL ? 'project-item-button' : ''}`" @click="toProject">
     <img
       :src="getImgUrl(projectData.id)"
       class="project-item-img"
@@ -14,11 +14,14 @@
       <div class="project-item-role font-14">
         {{ projectData.role }}
       </div>
-      <div class="project-item-name">
-        <Logo class="logo" />
-        <span class="font-semibold font-18">
-          {{ projectData.name }}
-        </span>
+      <div class="project-item-title-inner">
+        <div class="project-item-name">
+          <Logo class="logo" />
+          <span class="font-semibold font-18">
+            {{ projectData.name }}
+          </span>
+        </div>
+        <IconLink v-if="isURL" />
       </div>
     </div>
   </div>
@@ -32,6 +35,7 @@
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
 import type { Project } from '@/types';
+import IconLink from '../icons/IconLink.vue';
 
 const props = defineProps<{
   projectData: Project;
@@ -47,6 +51,7 @@ const getImgUrl = (id: string) => {
 const toProject = () => {
   props.projectData.url && window.open(props.projectData.url, '', '_blank');
 };
+const isURL = !!props.projectData.url;
 </script>
 
 <style>
@@ -60,19 +65,26 @@ const toProject = () => {
   justify-content: space-between;
   margin-top: 20px;
   border-radius: 10px;
-  /* border: 1px solid var(--color-border); */
   background-color: var(--color-background-mute);
-  cursor: pointer;
   border: 2px solid var(--color-background-mute);
 }
 
-.project-item:hover {
+.project-item-button {
+  cursor: pointer;
+}
+
+.project-item-button:hover {
   border-color: var(--color-border);
   filter: brightness(0.99);
 }
 
-.project-item:active {
+.project-item-button:active {
   filter: brightness(0.94);
+}
+
+.project-item-title-inner {
+  display: flex;
+  justify-content: space-between;
 }
 
 .project-item-img {

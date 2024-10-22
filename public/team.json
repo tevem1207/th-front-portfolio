@@ -2,20 +2,27 @@
   {
     "id": "LivingFakePlants",
     "name": "살아있는 가짜 식물",
-    "role": "One-person team",
+    "role": "One-person team (2023.06 ~ 2023.07)",
     "description": [
       "가상 식물 키우기 서비스",
       "React와 TypeScript 사용",
       "Custom Hook을 이용한 로직 분리",
-      "MUI를 사용하여 버튼, 다크 모드 등의 UI를 구현",
-      "FireStore를 활용하여 사용자 데이터를 저장"
+      "FireStore를 활용하여 사용자 데이터를 저장",
+      "Firebase Authentication을 이용해 OAuth 구현"
     ],
     "url": "https://living-fake-plants.web.app"
   },
   {
+    "id": "TypeBoy",
+    "name": "타입 보이",
+    "role": "Frontend develop (2024.09 ~ )",
+    "description": ["한글 타자 연습 서비스", "Vercel ci/cd 적용", "shadcn/ui, Turborepo 사용"],
+    "url": "https://typeboy.vercel.app/"
+  },
+  {
     "id": "Beanzido",
     "name": "Beanzido",
-    "role": "Front-end develop & Design",
+    "role": "Frontend develop",
     "description": [
       "지도기반 실시간 채팅 서비스",
       "WebSocket의 클라이언트 코드 구현",
@@ -24,32 +31,28 @@
       "PWA로 개발하여, 데스크탑과 모바일 환경 모두 지원",
       "Recoil을 사용하여 상태관리",
       "같은 위치에 마커가 여러 개 생성될 때, 클러스터링 하여 가독성 개선"
-    ],
-    "url": ""
+    ]
   },
   {
     "id": "Wooju",
     "name": "우-주",
-    "role": "Front-end develop & Data analysis",
+    "role": "Frontend develop & Data analysis",
     "description": [
       "빅데이터를 활용한 전통주 추천 서비스",
       "Vue3를 이용하여 취향 설문 페이지, 전통주 조회 및 검색 페이지를 구현",
       "데이터 분석을 위한 크롤링과 Python 개발 담당",
-      "전통주 판매 쇼핑몰을 크롤링하여 약 600종의 전통주에 대한 판매 데이터를 수집",
-      "koNLPy를 이용하여 키워드 추출"
-    ],
-    "url": ""
+      "전통주 판매 쇼핑몰을 크롤링하여 약 600종의 전통주에 대한 판매 데이터를 수집"
+    ]
   },
   {
     "id": "CatchPrize",
     "name": "Catch-Prize",
-    "role": "Front-end develop & Design",
+    "role": "Frontend develop",
     "description": [
       "WebRTC를 이용한 화상 보드 게임 서비스",
-      "Vue와 Element Plus 라이브러리를 이용한 프론트 엔드를 담당",
+      "Vue를 이용한 프론트엔드 개발 담당",
       "JavaScript와 CSS의 애니메이션, 의사 클래스를 이용한 상호작용이 가능한 UI",
       "WebSocket으로 실시간 반영되는 친구 목록, 방 목록"
-    ],
-    "url": ""
+    ]
   }
 ]

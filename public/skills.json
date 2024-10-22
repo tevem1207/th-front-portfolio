@@ -3,10 +3,10 @@
     "id": "React",
     "name": "React.js",
     "contents": [
-      "Custom Hook을 통한 로직 구현",
-      "useCallback, useMemo로 렌더링 최적화",
-      "레이지 로딩 및 스켈레톤 UI 구현",
-      "Recoil을 통한 상태관리"
+      "Hook을 통한 로직 구현",
+      "상태 관리 및 불필요한 상태 변수 제거를 통한 최적화",
+      "모노레포 방식의 팀 개발 환경 구축 경험",
+      "Tanstack Query를 이용한 서버 상태 관리"
     ],
     "level": 80,
     "color": "#61DAFB"
@@ -14,25 +14,22 @@
   {
     "id": "Vue",
     "name": "Vue.js",
-    "contents": [
-      "Composition API 와 setup script를 통한 로직 구현",
-      "Vuex를 사용하여 상태관리",
-      "Vue2와 Vue3 모두 경험"
-    ],
-    "level": 85,
+    "contents": ["Composition API 와 setup script를 통한 로직 구현", "Vue2와 Vue3 모두 경험"],
+    "level": 70,
     "color": "#4FC08D"
   },
   {
     "id": "TypeScript",
     "name": "TypeScript",
     "contents": ["정적인 타입 선언을 통해 효율적인 코드 탐색과 디버깅 가능"],
-    "level": 70,
+    "level": 80,
     "color": "#3178C6"
   },
   {
     "id": "JavaScript",
     "name": "JavaScript",
     "contents": [
+      "Promise, async/await를 이용한 비동기 처리",
       "ES6+ 문법 사용",
       "서비스에서 필요한 기능을 함수 단위로 구현 가능",
       "자료 구조를 활용하여, 코드의 효율성을 높일 수 있음"
@@ -41,21 +38,17 @@
     "color": "#F7DF1E"
   },
   {
-    "id": "FastAPI",
-    "name": "FastAPI",
-    "contents": ["Pydantic 모델을 통한 데이터 검증", "REST API 구현"],
-    "level": 55,
-    "color": "#009688"
-  },
-  {
     "id": "Python",
     "name": "Python",
-    "contents": [
-      "BFS, DFS 등의 알고리즘 구현 가능",
-      "pandas와 scikit-learn을 이용한 콘텐츠 기반 필터링 구현",
-      "Requests와 Beautiful Soup을 이용한 웹 크롤링"
-    ],
-    "level": 80,
+    "contents": ["BFS, DFS 등의 알고리즘 구현 가능", "FastAPI를 이용해 REST API 구현"],
+    "level": 50,
+    "color": "#3776AB"
+  },
+  {
+    "id": "Java",
+    "name": "Java",
+    "contents": ["기초 문법과 데이터 구조 이해"],
+    "level": 30,
     "color": "#3776AB"
   }
 ]

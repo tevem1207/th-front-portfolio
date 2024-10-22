@@ -3,14 +3,12 @@
     <div class="intro-title">
       <span class="font-20 font-semibold">성장</span>
       <span class="font-18">하는</span>
-      <span class="font-20 font-semibold"> 개발자 황태희</span>
-      <span class="font-18">입니다.</span>
+      <span class="font-20 font-semibold"> 프론트엔드 개발자 </span>
+      <span class="font-18">황태희 입니다.</span>
     </div>
     <div class="intro-contents font-16">
-      <p>삼성 청년 소프트웨어 아카데미에서</p>
-      <p>웹 개발에 대한 이해도를 높였고,</p>
-      <p>다양한 프로젝트를 통해 하루하루</p>
-      <p>성장하고 있습니다.</p>
+      <p>문제 해결에 열정을 가지고,</p>
+      <p>사용자 경험을 최우선으로 생각합니다.</p>
     </div>
     <img class="intro-turtle" src="@/assets/turtle.gif" alt="turtle" />
   </div>

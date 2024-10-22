@@ -5,7 +5,7 @@
       <div>
         <span class="profile-title font-16"> {{ profileData.title }} </span>
         <span class="profile-period">
-          {{ profileData.startAt }} - {{ profileData.endAt }} ({{ 'duration' }})
+          {{ profileData.startAt }} - {{ profileData.endAt }} ({{ getDuration(profileData) }})
         </span>
       </div>
       <div class="profile-content">
@@ -22,6 +22,24 @@ import { ref } from 'vue';
 import type { Profile } from '@/types';
 
 const profilesData = ref<Array<Profile>>();
+const getDuration = (profileData: Profile) => {
+  const startDate = new Date(profileData.startAt);
+  const endDate = new Date(profileData.endAt);
+
+  const yearDiff = endDate.getFullYear() - startDate.getFullYear();
+  const monthDiff = endDate.getMonth() - startDate.getMonth();
+
+  if (monthDiff >= 11) {
+    return `${yearDiff + 1}년`;
+  }
+
+  if (yearDiff === 0) {
+    return `${monthDiff + 1}개월`;
+  }
+
+  return `${yearDiff}년 ${monthDiff + 1}개월`;
+};
+
 fetch('/profile.json')
   .then(res => res.json())
   .then(data => {
