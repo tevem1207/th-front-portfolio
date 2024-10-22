@@ -31,7 +31,7 @@ import IconMenuBurger from '@/components/icons/IconMenuBurger.vue';
 const menues = [
   { key: 'profile', name: 'Profile' },
   { key: 'skills', name: 'Skills' },
-  { key: 'teamProjects', name: 'Team Projects' },
+  { key: 'projects', name: 'Toy Projects' },
 ];
 const isMenu = ref(false);
 const setIsMenu = () => {
