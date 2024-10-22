@@ -1,9 +1,5 @@
 <template>
-  <div
-    @mouseover="setLevel(true)"
-    @mouseleave="setLevel(false)"
-    class="skill-item"
-  >
+  <div @mouseover="setLevel(true)" @mouseleave="setLevel(false)" class="skill-item">
     <div class="skill-item-title">
       <Logo class="logo" />
       <p class="font-bold font-12">
@@ -16,11 +12,7 @@
       </li>
     </ul>
     <Transition name="level">
-      <div
-        v-if="isLevel"
-        class="skill-item-level"
-        :style="{ borderColor: `${skillData.color}` }"
-      >
+      <div v-if="isLevel" class="skill-item-level" :style="{ borderColor: `${skillData.color}` }">
         <div
           class="skill-item-level-bar bar"
           :style="{
@@ -35,15 +27,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineAsyncComponent } from "vue";
-import type { Skill } from "@/types";
+import { ref, defineAsyncComponent } from 'vue';
+import type { Skill } from '@/types';
 
 const props = defineProps<{
   skillData: Skill;
 }>();
-const Logo = defineAsyncComponent(
-  () => import(`../icons/Icon${props.skillData.id}.vue`)
-);
+const Logo = defineAsyncComponent(() => import(`../icons/Icon${props.skillData.id}.vue`));
 const isLevel = ref(false);
 const count = ref(0);
 let intervalId: ReturnType<typeof setInterval> = -1;
@@ -136,8 +126,8 @@ const increaseCount = () => {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--color-background-mute);
-  text-shadow: -2px 0 var(--color-text), 0 2px var(--color-text),
-    2px 0 var(--color-text), 0 -2px var(--color-text);
+  text-shadow: -2px 0 var(--color-text), 0 2px var(--color-text), 2px 0 var(--color-text),
+    0 -2px var(--color-text);
   opacity: 1.5;
 }
 

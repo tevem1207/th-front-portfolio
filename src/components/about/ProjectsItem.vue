@@ -30,24 +30,22 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent } from "vue";
-import type { Project } from "@/types";
+import { defineAsyncComponent } from 'vue';
+import type { Project } from '@/types';
 
 const props = defineProps<{
   projectData: Project;
   index: number;
 }>();
 
-const Logo = defineAsyncComponent(
-  () => import(`../icons/Icon${props.projectData.id}.vue`)
-);
+const Logo = defineAsyncComponent(() => import(`../icons/Icon${props.projectData.id}.vue`));
 
 const getImgUrl = (id: string) => {
   return new URL(`../../assets/imgs/${id}.png`, import.meta.url).href;
 };
 
 const toProject = () => {
-  props.projectData.url && window.open(props.projectData.url, "", "_blank");
+  props.projectData.url && window.open(props.projectData.url, '', '_blank');
 };
 </script>
 

@@ -13,15 +13,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import ProjectsItem from "./ProjectsItem.vue";
-import type { Project } from "@/types";
+import { ref } from 'vue';
+import ProjectsItem from './ProjectsItem.vue';
+import type { Project } from '@/types';
 
 const projectsData = ref<Array<Project>>();
 
-fetch("/team.json")
-  .then((res) => res.json())
-  .then((data) => {
+fetch('/team.json')
+  .then(res => res.json())
+  .then(data => {
     projectsData.value = data;
   });
 </script>

@@ -25,13 +25,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import IconMenuBurger from "@/components/icons/IconMenuBurger.vue";
+import { ref } from 'vue';
+import IconMenuBurger from '@/components/icons/IconMenuBurger.vue';
 
 const menues = [
-  { key: "profile", name: "Profile" },
-  { key: "skills", name: "Skills" },
-  { key: "teamProjects", name: "Team Projects" },
+  { key: 'profile', name: 'Profile' },
+  { key: 'skills', name: 'Skills' },
+  { key: 'teamProjects', name: 'Team Projects' },
 ];
 const isMenu = ref(false);
 const setIsMenu = () => {
@@ -41,8 +41,8 @@ const scrollToElement = (targetId: string) => {
   const el = document.getElementById(targetId);
   if (el) {
     el.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
+      behavior: 'smooth',
+      block: 'start',
     });
   }
 };

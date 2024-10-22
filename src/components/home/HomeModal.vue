@@ -1,15 +1,13 @@
 <template>
   <TeleportModal :show-modal="isModal">
     <div class="modal-background" @click="closeModal">
-      <div class="modal-content" @click.stop>
-        this is the modal {{ index + 1 }}
-      </div>
+      <div class="modal-content" @click.stop>this is the modal {{ index + 1 }}</div>
     </div>
   </TeleportModal>
 </template>
 
 <script setup lang="ts">
-import TeleportModal from "../TeleportModal.vue";
+import TeleportModal from '../TeleportModal.vue';
 
 interface PropsType {
   itemsData: { name: string; contents: string }[];

@@ -5,24 +5,24 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted } from "vue";
-import HomeCarousel from "@/components/home/HomeCarousel.vue";
+import { onMounted, onUnmounted } from 'vue';
+import HomeCarousel from '@/components/home/HomeCarousel.vue';
 
 const setScreenSize = () => {
   let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
 };
 const items = [
-  { name: "Project1", contents: "Description of Project1" },
-  { name: "Project2", contents: "Description of Project2" },
-  { name: "Project3", contents: "Description of Project3" },
+  { name: 'Project1', contents: 'Description of Project1' },
+  { name: 'Project2', contents: 'Description of Project2' },
+  { name: 'Project3', contents: 'Description of Project3' },
 ];
 
 onMounted(() => {
-  window.addEventListener("resize", setScreenSize);
+  window.addEventListener('resize', setScreenSize);
 });
 onUnmounted(() => {
-  window.removeEventListener("resize", setScreenSize);
+  window.removeEventListener('resize', setScreenSize);
 });
 </script>
 

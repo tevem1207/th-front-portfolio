@@ -1,11 +1,5 @@
 <template>
-  <svg
-    width="16"
-    height="16"
-    viewBox="0 0 16 16"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_63_89)">
       <path
         d="M15.5556 7.55556C15.5556 11.7284 9.67868 16 8.00001 16C6.3209 16 0.444458 11.7284 0.444458 7.55556C0.444458 3.38267 3.82712 0 8.00001 0C12.1729 0 15.5556 3.38267 15.5556 7.55556Z"

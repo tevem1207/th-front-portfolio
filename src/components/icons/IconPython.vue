@@ -7,23 +7,11 @@
     preserveAspectRatio="xMinYMin meet"
   >
     <defs>
-      <linearGradient
-        x1="12.959%"
-        y1="12.039%"
-        x2="79.639%"
-        y2="78.201%"
-        id="a"
-      >
+      <linearGradient x1="12.959%" y1="12.039%" x2="79.639%" y2="78.201%" id="a">
         <stop stop-color="#387EB8" offset="0%" />
         <stop stop-color="#366994" offset="100%" />
       </linearGradient>
-      <linearGradient
-        x1="19.128%"
-        y1="20.579%"
-        x2="90.742%"
-        y2="88.429%"
-        id="b"
-      >
+      <linearGradient x1="19.128%" y1="20.579%" x2="90.742%" y2="88.429%" id="b">
         <stop stop-color="#FFE052" offset="0%" />
         <stop stop-color="#FFC331" offset="100%" />
       </linearGradient>

@@ -1,10 +1,5 @@
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 400 400"
-    width="2500"
-    height="2500"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="2500" height="2500">
     <path fill="#007acc" d="M0 200V0h400v400H0" />
     <path
       fill="#fff"

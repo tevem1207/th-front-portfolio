@@ -1,15 +1,11 @@
 <template>
   <div id="profile" class="profile">
     <div class="title">Profile</div>
-    <div
-      class="profile-container"
-      v-for="profileData in profilesData"
-      :key="profileData.id"
-    >
+    <div class="profile-container" v-for="profileData in profilesData" :key="profileData.id">
       <div>
         <span class="profile-title font-16"> {{ profileData.title }} </span>
         <span class="profile-period">
-          {{ profileData.startAt }} - {{ profileData.endAt }}
+          {{ profileData.startAt }} - {{ profileData.endAt }} ({{ 'duration' }})
         </span>
       </div>
       <div class="profile-content">
@@ -22,13 +18,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import type { Profile } from "@/types";
+import { ref } from 'vue';
+import type { Profile } from '@/types';
 
 const profilesData = ref<Array<Profile>>();
-fetch("/profile.json")
-  .then((res) => res.json())
-  .then((data) => {
+fetch('/profile.json')
+  .then(res => res.json())
+  .then(data => {
     profilesData.value = data;
   });
 </script>

@@ -26,10 +26,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { Carousel3d, Slide } from "vue3-carousel-3d";
-import CarouselItem from "./CarouselItem.vue";
-import HomeModal from "./HomeModal.vue";
+import { ref } from 'vue';
+import { Carousel3d, Slide } from 'vue3-carousel-3d';
+import CarouselItem from './CarouselItem.vue';
+import HomeModal from './HomeModal.vue';
 
 interface PropsType {
   itemsData: { name: string; contents: string }[];
