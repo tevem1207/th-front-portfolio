@@ -1,41 +1,41 @@
 <template>
-  <ul v-if="index % 2" class="project-item-contents">
-    <li v-for="content in projectData.description" :key="content">
-      {{ content }}
-    </li>
-  </ul>
-  <div :class="`project-item ${isURL ? 'project-item-button' : ''}`" @click="toProject">
-    <img
-      :src="getImgUrl(projectData.id)"
-      class="project-item-img"
-      :alt="projectData.name + ' project image'"
-    />
-    <div class="project-item-title">
-      <div class="project-item-role font-14">
-        {{ projectData.role }}
-      </div>
-      <div class="project-item-title-inner">
-        <div class="project-item-name">
-          <Logo class="logo" />
+  <div class="grid gap-3 grid-cols-1 sm:grid-cols-2 w-full">
+    <ul v-if="index % 2" class="project-item-contents pl-6">
+      <li v-for="content in projectData.description" :key="content">
+        {{ content }}
+      </li>
+    </ul>
+    <div :class="`project-item ${isURL ? 'project-item-button' : ''}`" @click="toProject">
+      <img
+        :src="getImgUrl(projectData.id)"
+        class="project-item-img"
+        :alt="projectData.name + ' project image'"
+      />
+      <div class="project-item-title">
+        <div class="project-item-role font-14">
+          {{ projectData.role }}
+        </div>
+        <div class="flex items-center gap-1">
+          <Logo class="size-4" />
           <span class="font-semibold font-18">
             {{ projectData.name }}
           </span>
+          <ArrowTopRightOnSquareIcon class="fill-gray-500 size-4 mb-1 ml-1" v-if="isURL" />
         </div>
-        <IconLink v-if="isURL" />
       </div>
     </div>
+    <ul v-if="(index + 1) % 2" class="project-item-contents pl-6">
+      <li v-for="content in projectData.description" :key="content">
+        {{ content }}
+      </li>
+    </ul>
   </div>
-  <ul v-if="(index + 1) % 2" class="project-item-contents">
-    <li v-for="content in projectData.description" :key="content">
-      {{ content }}
-    </li>
-  </ul>
 </template>
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/16/solid';
 import type { Project } from '@/types';
-import IconLink from '../icons/IconLink.vue';
 
 const props = defineProps<{
   projectData: Project;
@@ -82,11 +82,6 @@ const isURL = !!props.projectData.url;
   filter: brightness(0.94);
 }
 
-.project-item-title-inner {
-  display: flex;
-  justify-content: space-between;
-}
-
 .project-item-img {
   width: 100%;
   height: 240px;
@@ -103,33 +98,17 @@ const isURL = !!props.projectData.url;
   opacity: 0.8;
 }
 
-.project-item-name {
-  display: flex;
-  align-items: center;
-}
-
-.project-item-name .logo {
-  width: 16px;
-  height: 16px;
-  margin-right: 5px;
-}
-
 .project-item-contents {
   display: none;
 }
 
 @media (min-width: 600px) {
-  .project-item {
-    width: calc(50% - 10px);
-  }
-
   .project-item-contents {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 320px;
     margin-top: 20px;
-    width: calc(50% - 10px);
   }
 
   .project-item-contents li + li {

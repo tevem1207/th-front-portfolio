@@ -15,7 +15,7 @@
   {
     "id": "TypeBoy",
     "name": "타입 보이",
-    "role": "Frontend develop (2024.09 ~ )",
+    "role": "Frontend develop (2024.09 ~ WIP)",
     "description": ["한글 타자 연습 서비스", "Vercel ci/cd 적용", "shadcn/ui, Turborepo 사용"],
     "url": "https://typeboy.vercel.app/"
   },
