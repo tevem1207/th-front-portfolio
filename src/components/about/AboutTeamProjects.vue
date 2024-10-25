@@ -1,5 +1,5 @@
 <template>
-  <div id="teamProjects" class="team">
+  <div id="projects" class="team">
     <div class="title">Toy Projects</div>
     <div class="contents team-contents">
       <ProjectsItem
